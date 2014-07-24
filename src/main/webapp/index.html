@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<title>WelCome!</title>
+	<link rel="stylesheet" href="css/normalize.css" type="text/css">
+	<link rel="stylesheet" href="css/style.css" type="text/css">	
+</head>
+<body>
+	
+	<div id="intro">
+		<h1 id="title">
+			<span id="title-line1" class="title-line">Austere</span>
+			<span id="title-line2" class="title-line">is</span>
+			<span id="title-line3" class="title-line">Coming!</span>
+		</h1>
+		<br/>
+		<br/>
+		<br/>
+	</div>
+	<p/>
+	<div id="title-info">
+		
+		<p id="desc">System level Automation Testing solution</p>
+		<p class="credit">powered by Nokia FPD Testing Service Beijing</p>
+	</div>
+
+	<script type="text/javascript" src="js/greensock/TweenMax.min.js"></script>
+	<script src="js/jquery-1.7.2.min.js"></script>
+  	<script src="js/jquery.lettering-0.6.1.min.js"></script>
+	<script src="js/jquery.superscrollorama.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('body').css('visibility','visible');
+			// lettering.js to split up letters for animation
+			$('#title-line1').lettering();
+			$('#title-line2').lettering();
+			$('#title-line3').lettering();
+			
+			// TimelineLite for title animation, then start up superscrollorama when complete
+			(new TimelineLite())
+				.from( $('#title-line1 span'), .5, {delay: 1, css:{right:'1300px'}, ease:Back.easeOut})
+				.from( $('#title-line2'), .5, {css:{top:'1000px',opacity:'0'}, ease:Expo.easeOut})
+				.append([
+					TweenLite.from( $('#title-line3 .char1'), .5+Math.random(), {css:{top: '-200px', right:'1000px'}, ease:Elastic.easeOut}),
+					TweenLite.from( $('#title-line3 .char2'), .5+Math.random(), {css:{top: '300px', right:'1000px'}, ease:Elastic.easeOut}),
+					TweenLite.from( $('#title-line3 .char3'), .5+Math.random(), {css:{top: '-400px', right:'1000px'}, ease:Elastic.easeOut}),
+					TweenLite.from( $('#title-line3 .char4'), .5+Math.random(), {css:{top: '-200px', left:'1000px'}, ease:Elastic.easeOut}),
+					TweenLite.from( $('#title-line3 .char5'), .5+Math.random(), {css:{top: '200px', left:'1000px'}, ease:Elastic.easeOut}),
+					TweenLite.from( $('#title-line3 .char6'), .5+Math.random(), {css:{top: '100px', left:'1000px'}, ease:Elastic.easeOut}),
+					TweenLite.from( $('#title-line3 .char7'), .5+Math.random(), {css:{top: '500px', left:'1000px'}, ease:Elastic.easeOut})
+				]).from( $('#title-info'), 1, {css:{opacity:0, 'margin-top':40}, delay:-1, ease:Quad.easeOut, onComplete:initScrollAnimations});
+			
+			function initScrollAnimations() {
+				var controller = $.superscrollorama();
+				
+				// title tweens
+				$('.title-line span').each(function() {
+					controller.addTween(10, TweenLite.to(this, .75, {css:{top: Math.random()*-200-600, left: (Math.random()*1000)-500, rotation:Math.random()*720-360, 'font-size': Math.random()*300+150}, ease:Quad.easeOut}));
+				});
+				controller.addTween(10, TweenLite.to($('#title-line1'), .75, {css:{top: 600}, ease:Quad.easeOut}));
+				controller.addTween(10, TweenLite.to($('#title-line2'), .75, {css:{top: 200}, ease:Quad.easeOut}));
+				controller.addTween(10, TweenLite.to($('#title-line3'), .75, {css:{top: -200}, ease:Quad.easeOut}));
+			}
+			setTimeout("location.href='selectSite.jsp'",4000);
+		});
+	</script>
+
+</body></html>

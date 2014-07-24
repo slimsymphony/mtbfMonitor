@@ -1,0 +1,43 @@
+<%@include file="header.jsp"%>
+<%@page contentType="text/html;charset=UTF-8"%>
+<%@page import="com.nokia.testingservice.austere.service.*"%>
+<%@page import="com.nokia.testingservice.austere.util.*"%>
+<%@page import="com.nokia.testingservice.austere.model.*"%>
+<%@page import="java.util.*"%>
+<%
+%>
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Welcome to Austere</title>
+<link type="text/css" href="css/ui-lightness/jquery-ui-1.8.20.custom.css" rel="stylesheet" />
+<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="js/jquery-ui-1.8.20.custom.min.js"></script>
+<style type="text/css">
+body{
+	/*text-align: center;*/
+	font-family: Trebuchet MS, Tahoma, Verdana, Arial, sans-serif;
+}
+</style>
+<script type="text/javascript">
+$(function(){
+});
+
+function refresh(){
+	$.get( "getEmergency.jsp", 
+		   	{}, 
+			function(data, textStatus){
+		   		if($.trim(data)!=''){
+		   			
+		   		}
+	  		},
+	  		'text'
+	);
+}
+</script>
+</head>
+<body>
+	<div></div>
+</body>
+</html>

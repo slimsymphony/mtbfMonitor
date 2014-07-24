@@ -1,0 +1,370 @@
+/*
+	KISSmetrics' Product Home Layout
+	Author: Michael Simmons, m.simmons@kissmetrics.com
+	Date: 2008-09-29 23:01:33
+	
+	Note: IE6 fixes are included
+*/
+
+@import "reset.css";
+
+body {
+	margin: 0;
+	padding: 20px 0 0 0;
+	background: #1f1f1f url(../images/body_chalkboard.png);
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.gasket {
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	width: 932px;
+}
+
+
+/* Header
+----------------------------------------------- */
+#header {
+	float: left;
+	clear: both;
+	width: 932px;
+	position: relative;
+	margin: 0 0 20px 0;
+	padding: 0 0 20px 0;
+	border-bottom: solid 2px #535353;
+}
+#header p.account {
+	margin: 0 0 20px 0;
+	text-align: right;
+	font-size: .7em;
+	color: #fff;
+}
+#header p.account a {
+	color: #f6e99f;
+	text-decoration: none;
+}
+
+* html #header h1 {
+	cursor: pointer;
+	background: none;
+}
+#header h1 a {
+	display: block;
+	height: 344px;
+	height: 67px;
+	text-indent: -2000px;
+}
+#header ul {
+	position: absolute;
+	bottom: 36px;
+	right: 0;
+}
+* html #header ul {
+	bottom: 0;
+	top: 45px;
+}
+#header ul li {
+	float: left;
+	margin: 0 0 0 3px;
+}
+#header ul li a {
+	display: block;
+	float: left;
+	padding: 13px 15px 0 15px;
+	height: 25px;
+	background: #0f0f0f;
+	font-size: .8em;
+	font-weight: bold;
+	text-decoration: none;
+	color: #fff;
+	text-shadow: #000 0 0 5px;
+}
+#header ul li.active a,
+#header ul li.left_active a,
+#header ul li.right_active a {
+	background: #FA6F00;
+	text-shadow: #7f4100 0 1px 2px;
+}
+#header ul li.left_active a { background: #FA6F00 url(../images/home/active_left.png) no-repeat; }
+#header ul li.right_active a { background: #FA6F00 url(../images/home/active_right.png) no-repeat 100% 0; }
+
+
+/* Homepage Chalkboard
+----------------------------------------------- */
+#chalkboard {
+	clear: both;
+	position: relative;
+	width: 932px;
+	height: 273px;
+	background: url(../images/home/chalkboard.png) no-repeat;
+}
+#chalkboard p, #chalkboard p span { display: none; }
+#chalkboard h1 {
+	position: absolute;
+	top: 48px;
+	left: 57px;
+	width: 526px;
+	height: 100px;
+	text-indent: -2000px;
+	background: url(../images/home/chalkboard_h1.png) no-repeat;
+}
+* html #chalkboard h1 {
+	background: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/static/images/home/chalkboard_h1.png',sizingMethod='crop');
+}
+#chalkboard p.explore {
+	display: block;
+	position: absolute;
+	top: 187px;
+	left: 57px;
+	width: 391px;
+	height: 40px;
+	background: url(../images/home/chalkboard_explore.png) no-repeat;
+}
+* html #chalkboard p.explore {
+	background: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/static/images/home/chalkboard_explore.png',sizingMethod='crop');
+}
+#chalkboard p.explore a {
+	position: absolute;
+	top: 5px;
+	left: 262px;
+	display: block;
+	width: 124px;
+	height: 30px;
+	text-indent: -2000px;
+}
+
+
+/* Homepage How to Use
+----------------------------------------------- */
+#how_to_use {
+	float: left;
+	clear: both;
+	width: 932px;
+	padding-bottom: 20px;
+}
+#how_to_use h1 {
+	margin: 0 0 15px 31px;
+	width: 206px;
+	height: 14px;
+	text-indent: -2000px;
+	background: url(../images/home/h_howtouseproductplanner.png) no-repeat;
+}
+* html #how_to_use h1 {
+	background: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/static/images/home/h_howtouseproductplanner.png',sizingMethod='crop');
+}
+#how_to_use ol { margin: 0 0 0 20px; }
+#how_to_use li {
+	margin: 0 13px 0 0;
+	float: left;
+	width: 287px;
+	height: 192px;
+	text-indent: -2000px;
+}
+#how_to_use li.step_1 { background: url(../images/home/how_step1.png) no-repeat; }
+#how_to_use li.step_2 { background: url(../images/home/how_step2.png) no-repeat; }
+#how_to_use li.step_3 { background: url(../images/home/how_step3.png) no-repeat; }
+
+
+/* Featured Flows
+----------------------------------------------- */
+#featured_flows {
+	clear: both;
+	margin: 0 0 20px 0;
+}
+#featured_flows h1 {
+	margin: 0 0 15px 31px;
+	width: 112px;
+	height: 14px;
+	text-indent: -2000px;
+	background: url(../images/home/h_featuredflows.png) no-repeat;
+}
+* html #featured_flows h1 {
+	background: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/static/images/home/h_featuredflows.png',sizingMethod='crop');
+}
+#featured_flows .inner {
+	margin: 0 0 0 31px;
+	width: 855px;
+	height: 139px;
+	padding: 20px 0 0 20px;
+	background: url(../images/home/featured_well.png) no-repeat;
+}
+#featured_flows .inner .item {
+	float: left;
+	margin: 0 13px 0 0;
+	width: 128px;
+	text-align: center;
+}
+#featured_flows .inner .item h2 {
+	font-weight: bold;
+	font-size: .7em;
+	color: #fff;
+}
+#featured_flows .inner .item .thumb {
+	margin: 0 0 7px 0;
+	width: 128px;
+	height: 90px;
+	background: url(../images/home/featured_thumb.png) no-repeat;
+}
+#featured_flows p.view_more {
+	clear: both;
+	margin: 20px 25px 0 0;
+	text-align: right;
+}
+
+
+/* Four oh Four
+----------------------------------------------- */
+#four_oh_four {
+	clear: both;
+	position: relative;
+	margin: 20px 0 20px 0;
+	width: 932px;
+	height: 251px;
+	background: url(../images/home/chalkboard_404.png) no-repeat;
+}
+#four_oh_four h1 {
+	position: absolute;
+	top: 50px;
+	left: 47px;
+	width: 535px;
+	height: 147px;
+	text-indent: -2000px;
+	background: url(../images/home/chalkboard_404_copy.png) no-repeat;
+}
+#four_oh_four p { display: none; }
+#four_oh_four a.go_home {
+	display: block;
+	position: absolute;
+	top: 177px;
+	left: 225px;
+	width: 64px;
+	height: 19px;
+	text-indent: -2000px;
+}
+
+
+/* About
+----------------------------------------------- */
+#about {
+	float: left;
+	clear: both;
+	width: 872px;
+	padding: 10px 30px 30px 30px;
+}
+
+#about .main {
+	float: left;
+	width: 580px;
+}
+
+#about .main h1.h_about {
+	margin: 0 0 10px 0;
+	width: 196px;
+	height: 16px;
+	text-indent: -2000px;
+	background: url(../images/home/h_about.png) no-repeat;
+}
+
+#about .main h1.h_aboutkissmetrics {
+	margin: 0 0 10px 0;
+	width: 160px;
+	height: 16px;
+	text-indent: -2000px;
+	background: url(../images/home/h_aboutkissmetrics.png) no-repeat;
+}
+
+#about .main p {
+	margin: 0 0 35px 0;
+	font-size: .75em;
+	line-height: 1.6em;
+	color: #bababa;
+}
+
+#about .main a.visit_kissmetrics {
+	display: block;
+	width: 457px;
+	height: 44px;
+	text-indent: -2000px;
+	background: url(../images/home/kissmetrics.png) no-repeat;
+}
+
+* html #home .main a.visit_kissmetrics {
+	cursor: pointer;
+	background: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/static/images/home/chalkboard_explore.png',sizingMethod='crop');
+}
+
+#about .sidepanel {
+	float: right;
+	width: 246px;
+	padding: 0 0 15px 0;
+	background: #0f0f0f url(../images/home/side_bottom.png) no-repeat 0 100%;
+}
+#about .sidepanel .inner { background: url(../images/home/side_top.png) no-repeat; }
+#about .sidepanel h2 {
+	padding: 15px;
+	font-size: .8em;
+	color: #fff;
+	border-bottom: solid 1px #202020;
+}
+#about .sidepanel li {
+	padding: 10px 0 10px 15px;
+	background: url(../images/home/side_gradient.png) repeat-x 0 100%;
+	border-bottom: solid 1px #202020;
+	font-size: .7em;
+	color: #cfcfcf;
+}
+#about .sidepanel li strong {
+	font-weight: normal;
+	color: #ffbd77;
+}
+#about .sidepanel li span.phone {
+	padding-left: 15px;
+	background: url(../images/home/phone.gif) no-repeat 0 2px;
+}
+#about .sidepanel li span.email {
+	padding-left: 15px;
+	background: url(../images/home/email.gif) no-repeat 0 2px;
+}
+
+
+/* Footer
+---------------------------------------------- */
+#footer {
+	clear: both;
+	margin: 0 0 20px 0;
+	padding: 20px 0 0 0;
+	border-top: solid 2px #525252;
+}
+#footer p {
+	margin: 0 0 10px 0;
+	font-size: .75em;
+	text-align: center;
+	color: #f6e99e;
+}
+#footer a {
+	color: #f6e99f;
+	text-decoration: none;
+}
+#footer a.active { color: #fb8200; }
+#footer p.copyright {
+	font-size: .7em;
+	color: #707070;
+}
+
+
+/* Miscellaneous
+----------------------------------------------- */
+a {
+	color: #2d7e76;
+}
+.hide { display: none; }
+.clear { clear: both; }
+a img { border: none; }
+a { outline: none; }
+a:focus { -moz-outline-style: none; }
